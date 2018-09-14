@@ -20,8 +20,7 @@ public class BookController {
     public Book read(@PathVariable("id") Integer id) {
         Book book = new Book();
         book.setId(id);
-        book.setTitle(
-                "The Pope of Physics: Enrico Fermi and the Birth of the Atomic Age");
+        book.setTitle("The Pope of Physics: Enrico Fermi and the Birth of the Atomic Age");
         book.setAuthor("Gino Segrè and Bettina Hoerlin");
 
         return book;
