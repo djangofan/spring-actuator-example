@@ -1,0 +1,52 @@
+
+
+#Exposes Spring actuator endpoints
+management:
+  health:
+    diskspace:
+      enabled: true
+    db:
+      enabled: true
+    details:
+      enabled: true
+    application:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"
+  metrics:
+    export:
+      datadog:
+        enabled: false
+    enable:
+      jvm: true
+
+
+#spring:
+#  metrics:
+#    web:
+#      server:
+#        auto-time-requests: true
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  metrics:
+    simple:
+      enabled: true
+    statsd:
+      enabled: true
+    web:
+      server:
+        auto-time-requests: true
+#    use-global-registry: true
