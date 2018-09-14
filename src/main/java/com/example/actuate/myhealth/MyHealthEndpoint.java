@@ -1,4 +1,4 @@
-package com.basaki.actuate.myhealth;
+package com.example.actuate.myhealth;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

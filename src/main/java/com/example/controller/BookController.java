@@ -1,6 +1,6 @@
-package com.basaki.controller;
+package com.example.controller;
 
-import com.basaki.model.Book;
+import com.example.model.Book;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -12,16 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
-@Api(value = "Book API",
-        produces = "application/json", tags = {"API"})
+@Api(value = "Book API", produces = "application/json", tags = {"API"})
 public class BookController {
 
-    @ApiOperation(
-            value = "Retrieves a book.",
-            notes = "Requires book identifier",
-            response = Book.class)
-    @RequestMapping(method = RequestMethod.GET, produces = {
-            MediaType.APPLICATION_JSON_VALUE}, value = "/books/{id}")
+    @ApiOperation(value = "Retrieves a book.", notes = "Requires book identifier", response = Book.class)
+    @RequestMapping(method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE}, value = "/books/{id}")
     public Book read(@PathVariable("id") Integer id) {
         Book book = new Book();
         book.setId(id);
@@ -32,12 +27,11 @@ public class BookController {
         return book;
     }
 
-    @ApiOperation(
-            value = "Ping",
-            response = String.class)
+    @ApiOperation(value = "Ping", response = String.class)
     @RequestMapping(method = RequestMethod.GET, value = "/ping")
     public String ping() {
 
         return "pong";
     }
+
 }

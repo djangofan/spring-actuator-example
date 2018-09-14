@@ -1,4 +1,4 @@
-package com.basaki.config;
+package com.example.config;
 
 import java.util.ArrayList;
 import org.springframework.context.annotation.Bean;
@@ -16,11 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfiguration {
 
-    /**
-     * Creates the Swagger configuration bean.
-     *
-     * @return docket bean
-     */
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -33,14 +28,6 @@ public class SwaggerConfiguration {
                 .apiInfo(apiInfo("Book API", "Book Service API"));
     }
 
-    /**
-     * Creates an object containing API information including author name,
-     * email, version, license, etc.
-     *
-     * @param title       API title
-     * @param description API description
-     * @return API information
-     */
     private ApiInfo apiInfo(String title, String description) {
         Contact contact = new Contact("Indra Basak", "",
                 "developer@gmail.com");
@@ -48,4 +35,5 @@ public class SwaggerConfiguration {
                 contact, "license", "license url",
                 new ArrayList<VendorExtension>());
     }
+
 }

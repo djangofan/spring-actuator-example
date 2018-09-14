@@ -1,6 +1,6 @@
-package com.basaki.controller;
+package com.example.controller;
 
-import com.basaki.Application;
+import com.example.Application;
 import io.restassured.http.ContentType;
 import java.io.IOException;
 import org.junit.Test;
@@ -14,8 +14,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {Application.class},
-        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = {Application.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
 public class BookControllerFunctionalTests {
 

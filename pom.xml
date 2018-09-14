@@ -148,7 +148,7 @@
                 <version>${spring.boot.maven.plugin}</version>
                 <configuration>
                     <fork>true</fork>
-                    <mainClass>com.basaki.Application</mainClass>
+                    <mainClass>com.example.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

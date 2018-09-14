@@ -1,4 +1,4 @@
-package com.basaki.actuate.myhealth;
+package com.example.actuate.myhealth;
 
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;

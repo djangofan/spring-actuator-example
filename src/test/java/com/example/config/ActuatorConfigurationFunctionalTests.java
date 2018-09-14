@@ -1,6 +1,6 @@
-package com.basaki.config;
+package com.example.config;
 
-import com.basaki.Application;
+import com.example.Application;
 import io.restassured.http.ContentType;
 import org.junit.Test;
 import org.junit.runner.RunWith;

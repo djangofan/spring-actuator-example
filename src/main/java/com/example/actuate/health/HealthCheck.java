@@ -1,4 +1,4 @@
-package com.basaki.actuate.health;
+package com.example.actuate.health;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
