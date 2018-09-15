@@ -2,6 +2,7 @@ package com.example.config;
 
 import com.example.actuate.myhealth.MyHealthEndpoint;
 import com.example.actuate.myhealth.MyHealthWebEndpointExtension;
+import io.micrometer.core.instrument.binder.jvm.JvmThreadMetrics;
 import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnEnabledEndpoint;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -40,5 +41,9 @@ public class ActuatorConfiguration {
         return factory;
     }
 
+    @Bean
+    JvmThreadMetrics threadMetrics(){
+        return new JvmThreadMetrics();
+    }
 
 }
